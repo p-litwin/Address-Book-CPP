@@ -36,3 +36,5 @@ obj/
 plan/
 
 addressBook-obj.*
+
+*.txt
