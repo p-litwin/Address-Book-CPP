@@ -113,3 +113,9 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
+
+void UzytkownikMenedzer::wyloguj() {
+    idZalogowanegoUzytkownika = 0;
+    //wyswietl menu logowania
+    //usun ksiazke adresowa z pamieci
+}

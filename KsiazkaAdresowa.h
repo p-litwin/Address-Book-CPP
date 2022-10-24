@@ -17,6 +17,7 @@ public:
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
+    void wyloguj();
 };
 
 #endif // KSIAZKAADRESOWA_H
