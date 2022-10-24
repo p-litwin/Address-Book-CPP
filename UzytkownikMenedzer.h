@@ -29,6 +29,7 @@ public:
     void zapiszIdZalogowanegoUzytkownika(int id);
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPLiku();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
