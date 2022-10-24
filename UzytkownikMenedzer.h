@@ -31,6 +31,7 @@ public:
     void wczytajUzytkownikowZPLiku();
     void zmianaHaslaZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> &uzytkownicy);
+    void wyloguj();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
