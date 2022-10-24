@@ -11,3 +11,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 void KsiazkaAdresowa::logowanieUzytkownika() {
     uzytkownikMenedzer.zapiszIdZalogowanegoUzytkownika(uzytkownikMenedzer.logowanieUzytkownika());
 }
+
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
+    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+}
