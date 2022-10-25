@@ -120,6 +120,6 @@ void UzytkownikMenedzer::wyloguj() {
     //usun ksiazke adresowa z pamieci
 }
 
-int UzytkownikMenedzer::PobierzIdZalogowanegoUzytkownika() {
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
 }
