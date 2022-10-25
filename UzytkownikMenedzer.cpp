@@ -119,3 +119,7 @@ void UzytkownikMenedzer::wyloguj() {
     //wyswietl menu logowania
     //usun ksiazke adresowa z pamieci
 }
+
+int UzytkownikMenedzer::PobierzIdZalogowanegoUzytkownika() {
+    return idZalogowanegoUzytkownika;
+}
