@@ -19,3 +19,7 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
 void KsiazkaAdresowa::wyloguj() {
     uzytkownikMenedzer.wyloguj();
 }
+
+void KsiazkaAdresowa::wczytajAdresatowZalogowanegoUzytkownika() {
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+}
