@@ -14,11 +14,15 @@ using namespace std;
 class AdresatMenedzer {
     int iloscAdresatow;
     int idOstatniegoAdresata;
+    int idZalogowanegoUzytkownika;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    Adresat podajDaneNowegoAdresata();
 
 public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void ustawIdZalogowanegoUzytkownika();
+    void dodajAdresata();
 };
 
 #endif // ADRESATMENEDZER_H

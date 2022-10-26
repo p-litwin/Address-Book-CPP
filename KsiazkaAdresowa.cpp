@@ -23,3 +23,7 @@ void KsiazkaAdresowa::wyloguj() {
 void KsiazkaAdresowa::wczytajAdresatowZalogowanegoUzytkownika() {
     adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 }
+
+void KsiazkaAdresowa::dodajAdresata() {
+    adresatMenedzer.dodajAdresata();
+}
