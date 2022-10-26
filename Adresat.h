@@ -11,6 +11,7 @@ class Adresat {
     string imie, nazwisko, numerTelefonu, email, adres;
 public:
     int pobierzId();
+    int pobierzIdUzytkownika();
     string pobierzImie();
     string pobierzNazwisko();
     string pobierzNumerTelefonu();
