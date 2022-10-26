@@ -13,6 +13,7 @@ using namespace std;
 
 class AdresatMenedzer {
     int iloscAdresatow;
+    int idOstatniegoAdresata;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
 
