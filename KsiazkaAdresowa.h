@@ -20,6 +20,7 @@ public:
     void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wczytajAdresatowZalogowanegoUzytkownika();
+    void wyswietlWszystkichAdresatow();
     void dodajAdresata();
     void wyloguj();
 };
