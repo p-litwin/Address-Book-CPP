@@ -25,6 +25,8 @@ public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void ustawIdZalogowanegoUzytkownika(int id);
     void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
+    void wyswietlDaneAdresata(Adresat adresat);
 };
 
 #endif // ADRESATMENEDZER_H
