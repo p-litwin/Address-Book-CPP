@@ -8,8 +8,8 @@ using namespace std;
 
 class Adresat {
     int id, idUzytkownika;
-public:
     string imie, nazwisko, numerTelefonu, email, adres;
+public:
     int pobierzId();
     string pobierzImie();
     string pobierzNazwisko();

@@ -20,7 +20,7 @@ class PlikZAdresatami {
 
 public:
     PlikZAdresatami();
-    vector<Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector<Adresat> &adresaci, int idZalogowanegoUzytkownika);
 
 };
 
