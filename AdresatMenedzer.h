@@ -18,10 +18,12 @@ class AdresatMenedzer {
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     Adresat podajDaneNowegoAdresata();
+    void dopiszAdresataDoPliku(Adresat adresat);
 
 public:
+    AdresatMenedzer();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-    void ustawIdZalogowanegoUzytkownika();
+    void ustawIdZalogowanegoUzytkownika(int id);
     void dodajAdresata();
 };
 
