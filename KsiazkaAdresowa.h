@@ -14,12 +14,12 @@ class KsiazkaAdresowa {
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami = "Users.txt") : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
         uzytkownikMenedzer.wczytajUzytkownikowZPLiku();
+        adresatMenedzer.ustawIdZalogowanegoUzytkownika(0);
     };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
-    void wczytajAdresatowZalogowanegoUzytkownika();
     void wyswietlWszystkichAdresatow();
     void dodajAdresata();
     void wyloguj();

@@ -10,16 +10,19 @@ void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogo
 }
 
 void AdresatMenedzer::dodajAdresata() {
-    Adresat adresat;
+    if (idZalogowanegoUzytkownika != 0) {
 
-    system("cls");
-    cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata();
+        Adresat adresat;
 
-    adresaci.push_back(adresat);
-    dopiszAdresataDoPliku(adresat);
+        system("cls");
+        cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
+        adresat = podajDaneNowegoAdresata();
 
-    idOstatniegoAdresata++;
+        adresaci.push_back(adresat);
+        dopiszAdresataDoPliku(adresat);
+
+        idOstatniegoAdresata++;
+    }
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
@@ -58,18 +61,20 @@ void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int id) {
 }
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow() {
-    system("cls");
-    if (!adresaci.empty()) {
-        cout << "             >>> ADRESACI <<<" << endl;
-        cout << "-----------------------------------------------" << endl;
-        for (vector <Adresat> :: iterator itr = adresaci.begin(); itr != adresaci.end(); itr++) {
-            wyswietlDaneAdresata(*itr);
+    if (idZalogowanegoUzytkownika != 0) {
+        system("cls");
+        if (!adresaci.empty()) {
+            cout << "             >>> ADRESACI <<<" << endl;
+            cout << "-----------------------------------------------" << endl;
+            for (vector <Adresat> :: iterator itr = adresaci.begin(); itr != adresaci.end(); itr++) {
+                wyswietlDaneAdresata(*itr);
+            }
+            cout << endl;
+        } else {
+            cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
         }
-        cout << endl;
-    } else {
-        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+        system("pause");
     }
-    system("pause");
 }
 
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
