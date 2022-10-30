@@ -4,18 +4,9 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.dodajAdresata();
-    //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-    //ksiazkaAdresowa.wyloguj();
+    ksiazkaAdresowa.wystwietlMenuLogowania();
 
     return 0;
 }

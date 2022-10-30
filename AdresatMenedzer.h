@@ -19,11 +19,13 @@ class AdresatMenedzer {
     PlikZAdresatami plikZAdresatami;
     Adresat podajDaneNowegoAdresata();
     void dopiszAdresataDoPliku(Adresat adresat);
+    char wybierzOpcjeZMenuUzytkownika();
 
 public:
     AdresatMenedzer();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void ustawIdZalogowanegoUzytkownika(int id);
+    void wyswietlMenuUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
