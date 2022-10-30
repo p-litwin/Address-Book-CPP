@@ -22,7 +22,8 @@ void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
 }
 
 void KsiazkaAdresowa::wyloguj() {
-    uzytkownikMenedzer.wyloguj();
+    uzytkownikMenedzer.zapiszIdZalogowanegoUzytkownika(0);
+    adresatMenedzer.wyczyscPamiec();
 }
 
 void KsiazkaAdresowa::dodajAdresata() {
