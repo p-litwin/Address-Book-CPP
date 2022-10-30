@@ -27,6 +27,7 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyczyscPamiec();
 };
 
 #endif // ADRESATMENEDZER_H
