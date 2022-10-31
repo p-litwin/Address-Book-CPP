@@ -57,18 +57,15 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
         if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() != 0) {
             adresatMenedzer.ustawIdZalogowanegoUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
             adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
-            adresatMenedzer.wyswietlMenuUzytkownika();
+            wyswietlMenuUzytkownika();
         }
 
-    }
-
-    void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
-        uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
     }
 
     void KsiazkaAdresowa::wyloguj() {
         uzytkownikMenedzer.zapiszIdZalogowanegoUzytkownika(0);
         adresatMenedzer.wyczyscPamiec();
+        wystwietlMenuLogowania();
     }
 
     void KsiazkaAdresowa::dodajAdresata() {
@@ -78,3 +75,58 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
     void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
         adresatMenedzer.wyswietlWszystkichAdresatow();
     }
+
+    void KsiazkaAdresowa::wyswietlMenuUzytkownika() {
+    char wybor;
+    while (true) {
+        wybor = wybierzOpcjeZMenuUzytkownika();
+        switch (wybor) {
+        case '1':
+            adresatMenedzer.dodajAdresata();
+            break;
+        case '2':
+            //wyszukajAdresatowPoImieniu(adresaci);
+            break;
+        case '3':
+            //wyszukajAdresatowPoNazwisku(adresaci);
+            break;
+        case '4':
+            adresatMenedzer.wyswietlWszystkichAdresatow();
+            break;
+        case '5':
+            //idUsunietegoAdresata = usunAdresata(adresaci);
+            //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+            break;
+        case '6':
+            //edytujAdresata(adresaci);
+            break;
+        case '7':
+            uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+            break;
+        case '8':
+            wyloguj();
+            break;
+        }
+    }
+}
+char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
+    char wybor;
+
+    system("cls");
+    cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "1. Dodaj adresata" << endl;
+    //cout << "2. Wyszukaj po imieniu" << endl;
+    //cout << "3. Wyszukaj po nazwisku" << endl;
+    cout << "4. Wyswietl adresatow" << endl;
+    //cout << "5. Usun adresata" << endl;
+    //cout << "6. Edytuj adresata" << endl;
+    cout << "---------------------------" << endl;
+    cout << "7. Zmien haslo" << endl;
+    cout << "8. Wyloguj sie" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Twoj wybor: ";
+    wybor = MetodyPomocnicze::wczytajZnak();
+
+    return wybor;
+}

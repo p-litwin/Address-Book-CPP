@@ -13,6 +13,7 @@ class KsiazkaAdresowa {
     AdresatMenedzer adresatMenedzer;
 
     char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami = "Users.txt") : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
@@ -22,8 +23,8 @@ public:
     void wystwietlMenuLogowania();
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
+    void wyswietlMenuUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void zmianaHaslaZalogowanegoUzytkownika();
     void wyswietlWszystkichAdresatow();
     void dodajAdresata();
     void wyloguj();
