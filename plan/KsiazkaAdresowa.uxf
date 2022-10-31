@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
+      <x>930</x>
       <y>0</y>
       <w>210</w>
       <h>180</h>
@@ -26,10 +26,10 @@ haslo: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
+      <x>1160</x>
       <y>0</y>
       <w>780</w>
-      <h>240</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
@@ -41,36 +41,33 @@ UzytkownikMenedzer()
 + wczytajUzytkownikowZPliku(): Vector&lt;Uzytkownik&gt;
 + zapiszWszystkichUzytkownikowDoPliku(vector&lt;Uzytkownik&gt;): Void
 - czyPlikJestPusty(): Boolean
-- zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami: String
-- pobierzDaneUzytkownika(String): Uzytkownik- czyPlikJestPusty(fstream &amp;plikTekstowy): Boolean
-- zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik): String
-- pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami): Uzytkownik
-- pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiK Integer</panel_attributes>
+- zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik): String
+- pobierzDaneUzytkownika(String): Uzytkownik</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
+      <x>380</x>
       <y>0</y>
       <w>530</w>
       <h>310</h>
     </coordinates>
     <panel_attributes>UzytkownikMenedzer
 --
-idZalogowanegoUzytkownika:Integer
+idZalogowanegoUzytkownika: Integer
 uzytkownicy: vector &lt;Uzytkownik&gt;
 plikZUzytkownikami: PlikZUzytkownikami
 --
 UzytkownikMenedzer()
++ IzytkownikMenedzer();
 + rejestracjaUzytkownika(): Void
-+ logowanieUzytkownika(): Integer
-+ zapiszIdZalogowanegoUzytkownika(int id): Void
++ logowanieUzytkownika(): Void
++ zapiszIdZalogowanegoUzytkownika(Integer): Void
 + wypiszWszystkichUzytkownikow(): Void
 + wczytajUzytkownikowZPLiku(): Void
 + zmianaHaslaZalogowanegoUzytkownika(): Void
-+ zapiszWszystkichUzytkownikowDoPliku(vector&lt;Uzytkownik&gt;): Void
-+ wyloguj(): Void
++ zapiszWszystkichUzytkownikowDoPliku(vector&lt;Uzytkownik&gt; &amp;uzytkownicy): Void
 + pobierzIdZalogowanegoUzytkownika(): Integer
 - podajDaneNowegoUzytkownika(): Uzytkownik
 - pobierzIdNowegoUzytkownika(): Integer
@@ -80,10 +77,10 @@ UzytkownikMenedzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>890</x>
-      <y>260</y>
+      <x>940</x>
+      <y>220</y>
       <w>480</w>
-      <h>150</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -95,6 +92,8 @@ UzytkownikMenedzer()
 + konwersjaStringNaInt(string): Integer
 + zamienPierwszaLitereNaDuzaAPozostaleNaMale(String): String
 + czyPlikJestPusty(fstream): Boolean
++ wczytajZnak(); Char
++ czyPlikJestPusty(fstream); Boolean
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -103,28 +102,31 @@ UzytkownikMenedzer()
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>320</w>
-      <h>200</h>
+      <w>370</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 UzytkownikMenedzer uzytkownikMenedzer
+AdresatMenedzer adresatMenedzer;
 --
 KsiazkaAdresowa()
++ wystwietlMenuLogowania(): Void
 + rejestracjaUzytkownika(): Void
 + logowanieUzytkownika(): Void
++ wyswietlMenuUzytkownika(): Void
 + wypiszWszystkichUzytkownikow(): Void
-+ zmianaHaslaZalogowanegoUzytkownika(): Void
-+ wczytajAdresatowZalogowanegoUzytkownika(): Void
 + wyswietlWszystkichAdresatow(): Void
 + dodajAdresata(): Void
-+ wyloguj(): Void</panel_attributes>
++ wyloguj(): Void
+- char wybierzOpcjeZMenuGlownego();
+- char wybierzOpcjeZMenuUzytkownika();</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1160</x>
+      <x>1210</x>
       <y>440</y>
       <w>790</w>
       <h>200</h>
@@ -148,7 +150,7 @@ PlikZAdresatami();
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>760</x>
+      <x>810</x>
       <y>440</y>
       <w>380</w>
       <h>370</h>
@@ -183,7 +185,7 @@ Adres: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
+      <x>280</x>
       <y>440</y>
       <w>490</w>
       <h>260</h>
@@ -201,6 +203,7 @@ plikZAdresatami: PlikZAdresatami
 + dodajAdresata(): Void
 + wyswietlWszystkichAdresatow(): Void
 + wyswietlDaneAdresata(Adresat): Void
++ wyczyscPamiec(): Void
 - podajDaneNowegoAdresata(): Adresat
 - dopiszAdresataDoPliku(Adresat): Void</panel_attributes>
     <additional_attributes/>
