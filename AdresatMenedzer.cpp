@@ -20,8 +20,6 @@ void AdresatMenedzer::dodajAdresata() {
 
         adresaci.push_back(adresat);
         dopiszAdresataDoPliku(adresat);
-
-        idOstatniegoAdresata++;
     }
 }
 
