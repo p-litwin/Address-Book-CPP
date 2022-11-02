@@ -16,10 +16,7 @@ class KsiazkaAdresowa {
     char wybierzOpcjeZMenuUzytkownika();
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami = "Users.txt") : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
-        uzytkownikMenedzer.wczytajUzytkownikowZPLiku();
-        adresatMenedzer.ustawIdZalogowanegoUzytkownika(0);
-    };
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami = "Users.txt") : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {};
     void wystwietlMenuLogowania();
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();

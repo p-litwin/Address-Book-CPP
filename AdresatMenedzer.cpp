@@ -2,6 +2,7 @@
 
 AdresatMenedzer::AdresatMenedzer() {
     idOstatniegoAdresata = 0;
+    idZalogowanegoUzytkownika = 0;
 }
 
 void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika) {
