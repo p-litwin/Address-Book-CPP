@@ -18,7 +18,8 @@ class KsiazkaAdresowa {
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami = "Users.txt", string nazwaPlikuZAdresatami = "Contacts.txt"):
         uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami) {
-    }
+        wystwietlMenuLogowania();
+    };
     void wystwietlMenuLogowania();
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
