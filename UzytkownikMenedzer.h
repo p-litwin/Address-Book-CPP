@@ -29,7 +29,7 @@ public:
     };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
-    void zapiszIdZalogowanegoUzytkownika(int id);
+    void wylogowanie();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPLiku();
     void zmianaHaslaZalogowanegoUzytkownika();

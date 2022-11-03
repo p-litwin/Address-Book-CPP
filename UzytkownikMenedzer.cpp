@@ -91,8 +91,8 @@ void UzytkownikMenedzer::logowanieUzytkownika() {
     return;
 }
 
-void UzytkownikMenedzer::zapiszIdZalogowanegoUzytkownika(int id) {
-    idZalogowanegoUzytkownika = id;
+void UzytkownikMenedzer::wylogowanie() {
+    idZalogowanegoUzytkownika = 0;
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {

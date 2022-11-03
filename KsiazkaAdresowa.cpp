@@ -62,7 +62,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
     }
 
     void KsiazkaAdresowa::wylogowanieUzytkownika() {
-        uzytkownikMenedzer.zapiszIdZalogowanegoUzytkownika(0);
+        uzytkownikMenedzer.wylogowanie();
         delete adresatMenedzer;
         adresatMenedzer = NULL;
         wystwietlMenuLogowania();
