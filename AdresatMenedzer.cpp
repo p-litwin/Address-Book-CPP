@@ -1,12 +1,7 @@
 #include "AdresatMenedzer.h"
 
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika) {
-
-    idOstatniegoAdresata = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-}
-
 void AdresatMenedzer::dodajAdresata() {
-    if (idZalogowanegoUzytkownika != 0) {
+    if (ID_ZALOGOWANEGO_UZYTKOWNIKA != 0) {
 
         Adresat adresat;
 
@@ -15,15 +10,20 @@ void AdresatMenedzer::dodajAdresata() {
         adresat = podajDaneNowegoAdresata();
 
         adresaci.push_back(adresat);
-        dopiszAdresataDoPliku(adresat);
+        if (plikZAdresatami.dopiszAdresataDoPliku(adresat)){
+            cout << "Nowy adresat zostal dodany." << endl;
+        } else {
+            cout << "Blad. Nie udalo sie dodac nowego adresata do pliku." << endl;
+        }
+        system("pause");
     }
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     Adresat adresat;
 
-    adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     cout << "Podaj imie: ";
     string imie = MetodyPomocnicze::wczytajLinie();
     imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
@@ -50,12 +50,8 @@ void AdresatMenedzer::dopiszAdresataDoPliku(Adresat adresat) {
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 }
 
-void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int id) {
-    idZalogowanegoUzytkownika = id;
-}
-
 void AdresatMenedzer::wyswietlWszystkichAdresatow() {
-    if (idZalogowanegoUzytkownika != 0) {
+    if (ID_ZALOGOWANEGO_UZYTKOWNIKA != 0) {
         system("cls");
         if (!adresaci.empty()) {
             cout << "             >>> ADRESACI <<<" << endl;
@@ -78,8 +74,4 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
     cout << "Email:              " << adresat.pobierzEmail() << endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
-}
-
-void AdresatMenedzer::wyczyscPamiec() {
-    adresaci.clear();
 }
