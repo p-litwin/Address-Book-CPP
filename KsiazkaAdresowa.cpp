@@ -8,7 +8,7 @@ void KsiazkaAdresowa::wystwietlMenuLogowania() {
     char wybor;
 
     while (true) {
-        if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() == 0) {
+        if (!uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
             wybor = wybierzOpcjeZMenuGlownego();
 
             switch (wybor) {
@@ -54,26 +54,26 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 
     void KsiazkaAdresowa::logowanieUzytkownika() {
         uzytkownikMenedzer.logowanieUzytkownika();
-        if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() != 0) {
-            adresatMenedzer.ustawIdZalogowanegoUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
-            adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+            adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
             wyswietlMenuUzytkownika();
         }
 
     }
 
-    void KsiazkaAdresowa::wyloguj() {
-        uzytkownikMenedzer.zapiszIdZalogowanegoUzytkownika(0);
-        adresatMenedzer.wyczyscPamiec();
+    void KsiazkaAdresowa::wylogowanieUzytkownika() {
+        uzytkownikMenedzer.wylogowanie();
+        delete adresatMenedzer;
+        adresatMenedzer = NULL;
         wystwietlMenuLogowania();
     }
 
     void KsiazkaAdresowa::dodajAdresata() {
-        adresatMenedzer.dodajAdresata();
+        adresatMenedzer -> dodajAdresata();
     }
 
     void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
-        adresatMenedzer.wyswietlWszystkichAdresatow();
+        adresatMenedzer -> wyswietlWszystkichAdresatow();
     }
 
     void KsiazkaAdresowa::wyswietlMenuUzytkownika() {
@@ -82,7 +82,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
         wybor = wybierzOpcjeZMenuUzytkownika();
         switch (wybor) {
         case '1':
-            adresatMenedzer.dodajAdresata();
+            adresatMenedzer -> dodajAdresata();
             break;
         case '2':
             //wyszukajAdresatowPoImieniu(adresaci);
@@ -91,7 +91,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
             //wyszukajAdresatowPoNazwisku(adresaci);
             break;
         case '4':
-            adresatMenedzer.wyswietlWszystkichAdresatow();
+            adresatMenedzer -> wyswietlWszystkichAdresatow();
             break;
         case '5':
             //idUsunietegoAdresata = usunAdresata(adresaci);
@@ -104,7 +104,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
             uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
             break;
         case '8':
-            wyloguj();
+            wylogowanieUzytkownika();
             break;
         }
     }

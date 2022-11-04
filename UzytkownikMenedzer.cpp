@@ -53,10 +53,6 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
     }
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPLiku() {
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 void UzytkownikMenedzer::zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> &uzytkownicy) {
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
@@ -95,12 +91,12 @@ void UzytkownikMenedzer::logowanieUzytkownika() {
     return;
 }
 
-void UzytkownikMenedzer::zapiszIdZalogowanegoUzytkownika(int id) {
-    idZalogowanegoUzytkownika = id;
+void UzytkownikMenedzer::wylogowanie() {
+    idZalogowanegoUzytkownika = 0;
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
-    if (idZalogowanegoUzytkownika != 0) {
+    if (czyUzytkownikJestZalogowany()) {
         string noweHaslo = "";
         cout << "Podaj nowe haslo: ";
         noweHaslo = MetodyPomocnicze::wczytajLinie();
@@ -118,4 +114,12 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
+}
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany() {
+    if (idZalogowanegoUzytkownika != 0)
+        return true;
+    else
+        return false;
+
 }
