@@ -96,7 +96,7 @@ void UzytkownikMenedzer::wylogowanie() {
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
-    if (idZalogowanegoUzytkownika != 0) {
+    if (czyUzytkownikJestZalogowany()) {
         string noweHaslo = "";
         cout << "Podaj nowe haslo: ";
         noweHaslo = MetodyPomocnicze::wczytajLinie();
@@ -114,4 +114,12 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
+}
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany() {
+    if (idZalogowanegoUzytkownika != 0)
+        return true;
+    else
+        return false;
+
 }

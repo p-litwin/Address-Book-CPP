@@ -8,7 +8,7 @@ void KsiazkaAdresowa::wystwietlMenuLogowania() {
     char wybor;
 
     while (true) {
-        if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() == 0) {
+        if (!uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
             wybor = wybierzOpcjeZMenuGlownego();
 
             switch (wybor) {
@@ -54,7 +54,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 
     void KsiazkaAdresowa::logowanieUzytkownika() {
         uzytkownikMenedzer.logowanieUzytkownika();
-        if (uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() != 0) {
+        if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
             adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
             wyswietlMenuUzytkownika();
         }

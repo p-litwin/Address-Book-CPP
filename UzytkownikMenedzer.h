@@ -35,6 +35,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> &uzytkownicy);
     int pobierzIdZalogowanegoUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
