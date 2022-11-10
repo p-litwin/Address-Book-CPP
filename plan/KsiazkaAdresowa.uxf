@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1197</x>
+      <x>999</x>
       <y>0</y>
       <w>189</w>
       <h>162</h>
@@ -26,7 +26,7 @@ haslo: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1197</x>
+      <x>999</x>
       <y>189</y>
       <w>549</w>
       <h>153</h>
@@ -47,7 +47,7 @@ PlikZUzytkownikami()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>666</x>
+      <x>468</x>
       <y>54</y>
       <w>405</w>
       <h>270</h>
@@ -76,7 +76,7 @@ UzytkownikMenedzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1251</x>
+      <x>1053</x>
       <y>423</y>
       <w>432</w>
       <h>153</h>
@@ -97,10 +97,10 @@ UzytkownikMenedzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>774</x>
+      <x>576</x>
       <y>738</y>
       <w>522</w>
-      <h>270</h>
+      <h>306</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -114,6 +114,8 @@ PlikZAdresatami();
 + usunAdresata(vector&lt;Adresat&gt;): Integer
 + zwrocNumerLiniiUsuwanegoAdresata(Integer): Integer
 + usunLinieZPliku(Integer): Void
++ pobierzIdOstatniegoAdresata(): Integer
++ zaktualizujDaneWybranegoAdresata(Adresat, Integer): Void
 - czyPlikJestPusty(fstream): Boolean
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(String): Integer
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(String): Integer
@@ -121,13 +123,15 @@ PlikZAdresatami();
 - zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat): String
 - usunPlik(string): Void
 - zmienNazwePliku(String,  Sring): Void
+- edytujWybranaLinieWPliku(Integer, String): Void
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>783</x>
+      <x>585</x>
       <y>369</y>
       <w>225</w>
       <h>333</h>
@@ -162,10 +166,10 @@ adres: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
+      <x>54</x>
       <y>459</y>
       <w>297</w>
-      <h>225</h>
+      <h>243</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -178,16 +182,18 @@ plikZAdresatami: PlikZAdresatami
 + dodajAdresata(): Void
 + wyswietlWszystkichAdresatow(): Void
 + usunAdresata(): Integer
++ edytujAdresata(): Void
 - podajDaneNowegoAdresata(): Adresat
 - dopiszAdresataDoPliku(Adresat): Void
 - wyswietlDaneAdresata(Adresat): Void
-- podajIdWybranegoAdresata(): Integer</panel_attributes>
+- podajIdWybranegoAdresata(): Integer
+- wybierzOpcjeZMenuEdycja(): Char</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>243</x>
+      <x>45</x>
       <y>54</y>
       <w>333</w>
       <h>261</h>
@@ -215,7 +221,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
+      <x>369</x>
       <y>153</y>
       <w>117</w>
       <h>27</h>
@@ -226,7 +232,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
+      <x>864</x>
       <y>180</y>
       <w>153</w>
       <h>117</h>
@@ -237,7 +243,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
+      <x>864</x>
       <y>72</y>
       <w>153</w>
       <h>99</h>
@@ -248,7 +254,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>378</x>
+      <x>180</x>
       <y>306</y>
       <w>27</w>
       <h>171</h>
@@ -259,7 +265,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
+      <x>342</x>
       <y>450</y>
       <w>261</w>
       <h>117</h>
@@ -270,7 +276,7 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
+      <x>342</x>
       <y>567</y>
       <w>252</w>
       <h>279</h>
