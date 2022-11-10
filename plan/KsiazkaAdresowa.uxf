@@ -183,6 +183,8 @@ plikZAdresatami: PlikZAdresatami
 + wyswietlWszystkichAdresatow(): Void
 + usunAdresata(): Integer
 + edytujAdresata(): Void
++ wyszukajAdresatowPoImieniu(): Void
++ wyszukajAdresatowPoNazwisku(): Void
 - podajDaneNowegoAdresata(): Adresat
 - dopiszAdresataDoPliku(Adresat): Void
 - wyswietlDaneAdresata(Adresat): Void
