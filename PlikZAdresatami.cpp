@@ -176,3 +176,7 @@ void PlikZAdresatami::zmienNazwePliku(string staraNazwa, string nowaNazwa) {
     else
         cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
 }
+
+int PlikZAdresatami::pobierzIdOstatniegoAdresata(){
+    return idOstatniegoAdresata;
+}
