@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>9</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>999</x>
-      <y>0</y>
-      <w>189</w>
-      <h>162</h>
+      <x>816</x>
+      <y>232</y>
+      <w>84</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Uzytkownik
 --
@@ -26,10 +26,10 @@ haslo: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>999</x>
-      <y>189</y>
-      <w>549</w>
-      <h>153</h>
+      <x>588</x>
+      <y>360</y>
+      <w>244</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
@@ -47,10 +47,10 @@ PlikZUzytkownikami()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>54</y>
-      <w>405</w>
-      <h>270</h>
+      <x>588</x>
+      <y>212</y>
+      <w>180</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>UzytkownikMenedzer
 --
@@ -76,12 +76,12 @@ UzytkownikMenedzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1053</x>
-      <y>423</y>
-      <w>432</w>
-      <h>153</h>
+      <x>712</x>
+      <y>68</y>
+      <w>192</w>
+      <h>68</h>
     </coordinates>
-    <panel_attributes>MetodyPomocnicze
+    <panel_attributes>/MetodyPomocnicze/
 --
 
 --
@@ -97,10 +97,10 @@ UzytkownikMenedzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
-      <y>738</y>
-      <w>522</w>
-      <h>306</h>
+      <x>140</x>
+      <y>392</y>
+      <w>232</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -112,7 +112,6 @@ PlikZAdresatami();
 + dopiszAdresataDoPliku(Adresat): Void
 + pobierzIdOstatniegoAdresata(): Integer
 + usunAdresata(vector&lt;Adresat&gt;): Integer
-+ zwrocNumerLiniiUsuwanegoAdresata(Integer): Integer
 + usunLinieZPliku(Integer): Void
 + pobierzIdOstatniegoAdresata(): Integer
 + zaktualizujDaneWybranegoAdresata(Adresat, Integer): Void
@@ -131,10 +130,10 @@ PlikZAdresatami();
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>369</y>
-      <w>225</w>
-      <h>333</h>
+      <x>64</x>
+      <y>216</y>
+      <w>100</w>
+      <h>148</h>
     </coordinates>
     <panel_attributes>Adresat
 --
@@ -166,10 +165,10 @@ adres: String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>54</x>
-      <y>459</y>
-      <w>297</w>
-      <h>243</h>
+      <x>232</x>
+      <y>220</y>
+      <w>140</w>
+      <h>124</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -189,16 +188,18 @@ plikZAdresatami: PlikZAdresatami
 - dopiszAdresataDoPliku(Adresat): Void
 - wyswietlDaneAdresata(Adresat): Void
 - podajIdWybranegoAdresata(): Integer
-- wybierzOpcjeZMenuEdycja(): Char</panel_attributes>
+- wybierzOpcjeZMenuEdycja(): Char
+- wyswietlIloscWyszukanychAdresatow(Integers): Void
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>54</y>
-      <w>333</w>
-      <h>261</h>
+      <x>412</x>
+      <y>60</y>
+      <w>148</w>
+      <h>116</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
@@ -223,67 +224,105 @@ KsiazkaAdresowa()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>369</x>
-      <y>153</y>
-      <w>117</w>
-      <h>27</h>
+      <x>556</x>
+      <y>108</y>
+      <w>132</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;310.0;10.0;310.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>180</y>
-      <w>153</w>
-      <h>117</h>
+      <x>676</x>
+      <y>328</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>72</y>
-      <w>153</w>
-      <h>99</h>
+      <x>764</x>
+      <y>260</y>
+      <w>60</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>306</y>
-      <w>27</w>
-      <h>171</h>
+      <x>296</x>
+      <y>108</y>
+      <w>124</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>290.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>450</y>
-      <w>261</w>
-      <h>117</h>
+      <x>160</x>
+      <y>276</y>
+      <w>80</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;270.0;10.0</additional_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>567</y>
-      <w>252</w>
-      <h>279</h>
+      <x>292</x>
+      <y>340</y>
+      <w>12</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;260.0;290.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>252</y>
+      <w>124</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>PlikTesktowy
+--
+NAZWA_PLIKU: String
+--
+PlikTekstowy()
+-czyPlikJestPusty(): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>288</y>
+      <w>80</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0;180.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>288</y>
+      <w>116</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;270.0;460.0;10.0;460.0</additional_attributes>
   </element>
 </diagram>
