@@ -78,7 +78,6 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
 
 void AdresatMenedzer::usunAdresata() {
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -123,7 +122,6 @@ void AdresatMenedzer::edytujAdresata() {
     system("cls");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
-    int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -132,7 +130,7 @@ void AdresatMenedzer::edytujAdresata() {
     char wybor;
     bool czyIstniejeAdresat = false;
 
-    for (int i = 0; i < adresaci.size(); i++) {
+    for (size_t i = 0; i < adresaci.size(); i++) {
         if (adresaci[i].pobierzId() == idEdytowanegoAdresata) {
             czyIstniejeAdresat = true;
             wybor = wybierzOpcjeZMenuEdycja();
